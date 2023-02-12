@@ -1,21 +1,14 @@
+import 'package:awesome_notifications_fcm/awesome_notifications_fcm.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:awesome_notifications/awesome_notifications.dart';
 import 'package:flutterresearch/notification/notification_controller.dart';
 
-void main() {
+void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  AwesomeNotifications().initialize(null, [
-    NotificationChannel(
-      channelKey: 'key1',
-      channelName: 'Awesome notif',
-      channelDescription: 'Notification example',
-      defaultColor: Color(0xFF9050DD),
-      ledColor: Colors.white,
-      playSound: true,
-      enableLights: true,
-      enableVibration: true,
-    ),
-  ]);
+  await NotificationController.initializeLocalNotifications(debug: true);
+  await NotificationController.initializeRemoteNotifications(debug: true);
+
   runApp(const MyApp());
 }
 
@@ -49,9 +42,8 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
-    // notifController.onActionReceivedMethod(ReceivedAction());
+    notifController.requestFirebaseToken();
   }
 
   @override
@@ -63,25 +55,11 @@ class _MyHomePageState extends State<MyHomePage> {
       body: Center(
         child: ElevatedButton(
           onPressed: () {
-            Notify();
+            notifController.localNotification();
           },
           child: Icon(Icons.circle_notifications),
         ),
       ),
     );
   }
-}
-
-void Notify() async {
-  String timezom = await AwesomeNotifications().getLocalTimeZoneIdentifier();
-  await AwesomeNotifications().createNotification(
-    content: NotificationContent(
-      id: 1,
-      channelKey: 'key1',
-      title: 'This is Notification',
-      bigPicture:
-          'https://images.pexels.com/photos/14679216/pexels-photo-14679216.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-      notificationLayout: NotificationLayout.BigPicture,
-    ),
-  );
 }
