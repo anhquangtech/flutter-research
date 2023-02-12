@@ -1,17 +1,27 @@
-# flutterresearch
+# Flutter Research
 
-A new Flutter project.
+Flutter Research with me :v
 
-## Getting Started
+#### Building for source
+Project use Flutter SDK version 3.3.8. Please install FVM to setup enviroment.
 
-This project is a starting point for a Flutter application.
+Step 1: Set up fvm to switch Flutter SDK version:
+https://fvm.app/docs/getting_started/installation
 
-A few resources to get you started if this is your first Flutter project:
+```sh
+fvm install 3.3.8
+fvm use 3.3.8
+```
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+Step 2: Copy google-service.json paste to android/app/src/google-service.json
+Step 3: To run source code
+```sh
+fvm flutter run
+```
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
-# flutter-research
+
+## License
+
+MIT
+
+**Free Software, Hell Yeah!**
