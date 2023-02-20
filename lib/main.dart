@@ -43,6 +43,7 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   void initState() {
     super.initState();
+    notifController.checkPermission();
     notifController.requestFirebaseToken();
   }
 

@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:awesome_notifications/awesome_notifications.dart';
 import 'package:awesome_notifications_fcm/awesome_notifications_fcm.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -41,13 +43,20 @@ class NotificationController {
     await AwesomeNotifications().createNotification(
       content: NotificationContent(
         id: 1,
-        channelKey: 'key1',
+        channelKey: 'alerts',
         title: 'This is Notification',
         bigPicture:
             'https://images.pexels.com/photos/14679216/pexels-photo-14679216.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
         notificationLayout: NotificationLayout.BigPicture,
       ),
     );
+  }
+
+  Future<void> checkPermission() async {
+    bool isAllowed = await AwesomeNotifications().isNotificationAllowed();
+    if (!isAllowed) {
+      await AwesomeNotifications().requestPermissionToSendNotifications();
+    }
   }
 
   /// Use this method to execute on background when a silent data arrives
