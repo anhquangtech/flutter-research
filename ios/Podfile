@@ -1,5 +1,5 @@
 # Uncomment this line to define a global platform for your project
-# platform :ios, '11.0'
+platform :ios, '11.0'
 
 # CocoaPods analytics sends network stats synchronously affecting flutter build latency.
 ENV['COCOAPODS_DISABLE_STATS'] = 'true'
@@ -39,3 +39,15 @@ post_install do |installer|
     flutter_additional_ios_build_settings(target)
   end
 end
+
+################  Awesome Notifications FCM pod mod  ###################
+awesome_fcm_pod_file = File.expand_path(File.join('plugins', 'awesome_notifications_fcm', 'ios', 'Scripts', 'AwesomeFcmPodFile'), '.symlinks')
+require awesome_fcm_pod_file
+target 'AwesomeNotifExtension' do
+  use_frameworks!
+  use_modular_headers!
+  
+  install_awesome_fcm_ios_pod_target File.dirname(File.realpath(__FILE__))
+end
+update_awesome_fcm_service_target('AwesomeNotifExtension', File.dirname(File.realpath(__FILE__)), flutter_root)
+################  Awesome Notifications FCM pod mod  ###################

@@ -14,8 +14,21 @@
 		97C146FE1CF9000F007C117D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97C146FD1CF9000F007C117D /* Assets.xcassets */; };
 		97C147011CF9000F007C117D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97C146FF1CF9000F007C117D /* LaunchScreen.storyboard */; };
 		B1ACAC1AA5B67DCFBA02E738 /* Pods_Runner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E67D71577E7C51AA92591475 /* Pods_Runner.framework */; };
+		C9FC8656EA9879CAC6BF4565 /* Pods_AwesomeNotifExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FAE0191E05A470F5D3198CE /* Pods_AwesomeNotifExtension.framework */; };
+		CA02705A29A31BEC00263F09 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CA02705929A31BEC00263F09 /* GoogleService-Info.plist */; };
+		CA02705D29A323FA00263F09 /* AwesomeNotifExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = CA09A3322998900500A9D6EF /* AwesomeNotifExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		CA09A3352998900500A9D6EF /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA09A3342998900500A9D6EF /* NotificationService.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CA02705E29A3243500263F09 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 97C146E61CF9000F007C117D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CA09A3312998900500A9D6EF;
+			remoteInfo = AwesomeNotifExtension;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		9705A1C41CF9048500538489 /* Embed Frameworks */ = {
@@ -28,12 +41,27 @@
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		CA02705C29A323E200263F09 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 8;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				CA02705D29A323FA00263F09 /* AwesomeNotifExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 1;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		1498D2321E8E86230040F4C2 /* GeneratedPluginRegistrant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GeneratedPluginRegistrant.h; sourceTree = "<group>"; };
 		1498D2331E8E89220040F4C2 /* GeneratedPluginRegistrant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeneratedPluginRegistrant.m; sourceTree = "<group>"; };
+		2F891CB58E08D5E8163ECFC1 /* Pods-AwesomeNotifExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AwesomeNotifExtension.release.xcconfig"; path = "Target Support Files/Pods-AwesomeNotifExtension/Pods-AwesomeNotifExtension.release.xcconfig"; sourceTree = "<group>"; };
+		2FAE0191E05A470F5D3198CE /* Pods_AwesomeNotifExtension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AwesomeNotifExtension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B3967151E833CAA004F5970 /* AppFrameworkInfo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = AppFrameworkInfo.plist; path = Flutter/AppFrameworkInfo.plist; sourceTree = "<group>"; };
+		402923EA6BD20A65876C4B7D /* Pods-AwesomeNotifExtension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AwesomeNotifExtension.debug.xcconfig"; path = "Target Support Files/Pods-AwesomeNotifExtension/Pods-AwesomeNotifExtension.debug.xcconfig"; sourceTree = "<group>"; };
+		44DD0D9BF2D748305A846949 /* Pods-AwesomeNotifExtension.profile.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AwesomeNotifExtension.profile.xcconfig"; path = "Target Support Files/Pods-AwesomeNotifExtension/Pods-AwesomeNotifExtension.profile.xcconfig"; sourceTree = "<group>"; };
 		58769191ED26F82C343BFFF9 /* Pods-Runner.profile.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Runner.profile.xcconfig"; path = "Target Support Files/Pods-Runner/Pods-Runner.profile.xcconfig"; sourceTree = "<group>"; };
 		58B12760C7E2438D35C8A829 /* Pods-Runner.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Runner.debug.xcconfig"; path = "Target Support Files/Pods-Runner/Pods-Runner.debug.xcconfig"; sourceTree = "<group>"; };
 		74858FAD1ED2DC5600515810 /* Runner-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Runner-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -46,6 +74,7 @@
 		97C146FD1CF9000F007C117D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		97C147001CF9000F007C117D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		97C147021CF9000F007C117D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CA02705929A31BEC00263F09 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CA09A3322998900500A9D6EF /* AwesomeNotifExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = AwesomeNotifExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA09A3342998900500A9D6EF /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
 		CA09A3362998900500A9D6EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -66,6 +95,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9FC8656EA9879CAC6BF4565 /* Pods_AwesomeNotifExtension.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,6 +116,7 @@
 		97C146E51CF9000F007C117D = {
 			isa = PBXGroup;
 			children = (
+				CA02705929A31BEC00263F09 /* GoogleService-Info.plist */,
 				9740EEB11CF90186004384FC /* Flutter */,
 				97C146F01CF9000F007C117D /* Runner */,
 				CA09A3332998900500A9D6EF /* AwesomeNotifExtension */,
@@ -134,6 +165,9 @@
 				58B12760C7E2438D35C8A829 /* Pods-Runner.debug.xcconfig */,
 				F83C478F05E0DD043EB030EF /* Pods-Runner.release.xcconfig */,
 				58769191ED26F82C343BFFF9 /* Pods-Runner.profile.xcconfig */,
+				402923EA6BD20A65876C4B7D /* Pods-AwesomeNotifExtension.debug.xcconfig */,
+				2F891CB58E08D5E8163ECFC1 /* Pods-AwesomeNotifExtension.release.xcconfig */,
+				44DD0D9BF2D748305A846949 /* Pods-AwesomeNotifExtension.profile.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -142,6 +176,7 @@
 			isa = PBXGroup;
 			children = (
 				E67D71577E7C51AA92591475 /* Pods_Runner.framework */,
+				2FAE0191E05A470F5D3198CE /* Pods_AwesomeNotifExtension.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -161,10 +196,12 @@
 				9705A1C41CF9048500538489 /* Embed Frameworks */,
 				3B06AD1E1E4923F5004D2608 /* Thin Binary */,
 				E743665D16248688960DD619 /* [CP] Embed Pods Frameworks */,
+				CA02705C29A323E200263F09 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				CA02705F29A3243500263F09 /* PBXTargetDependency */,
 			);
 			name = Runner;
 			productName = Runner;
@@ -175,6 +212,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CA09A33A2998900500A9D6EF /* Build configuration list for PBXNativeTarget "AwesomeNotifExtension" */;
 			buildPhases = (
+				0E9533EF1CF97F39125B7A9F /* [CP] Check Pods Manifest.lock */,
 				CA09A32E2998900500A9D6EF /* Sources */,
 				CA09A32F2998900500A9D6EF /* Frameworks */,
 				CA09A3302998900500A9D6EF /* Resources */,
@@ -233,6 +271,7 @@
 			files = (
 				97C147011CF9000F007C117D /* LaunchScreen.storyboard in Resources */,
 				3B3967161E833CAA004F5970 /* AppFrameworkInfo.plist in Resources */,
+				CA02705A29A31BEC00263F09 /* GoogleService-Info.plist in Resources */,
 				97C146FE1CF9000F007C117D /* Assets.xcassets in Resources */,
 				97C146FC1CF9000F007C117D /* Main.storyboard in Resources */,
 			);
@@ -248,6 +287,28 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		0E9533EF1CF97F39125B7A9F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AwesomeNotifExtension-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 		3B06AD1E1E4923F5004D2608 /* Thin Binary */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -274,7 +335,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "/bin/sh \"$FLUTTER_ROOT/packages/flutter_tools/bin/xcode_backend.sh\" build";
+			shellScript = "/bin/sh \"$FLUTTER_ROOT/packages/flutter_tools/bin/xcode_backend.sh\" build\n";
 		};
 		E4B2C897E6251373D946926F /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -336,6 +397,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CA02705F29A3243500263F09 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CA09A3312998900500A9D6EF /* AwesomeNotifExtension */;
+			targetProxy = CA02705E29A3243500263F09 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		97C146FA1CF9000F007C117D /* Main.storyboard */ = {
@@ -412,9 +481,10 @@
 			baseConfigurationReference = 7AFA3C8E1D35360C0083082E /* Release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				BUILD_LIBRARY_FOR_DISTRIBUTION = NO;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = "$(FLUTTER_BUILD_NUMBER)";
-				DEVELOPMENT_TEAM = 92HDVG8T6H;
+				DEVELOPMENT_TEAM = A5R74MCCR3;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = Runner/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -541,9 +611,10 @@
 			baseConfigurationReference = 9740EEB21CF90195004384FC /* Debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				BUILD_LIBRARY_FOR_DISTRIBUTION = NO;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = "$(FLUTTER_BUILD_NUMBER)";
-				DEVELOPMENT_TEAM = 92HDVG8T6H;
+				DEVELOPMENT_TEAM = A5R74MCCR3;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = Runner/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -564,9 +635,10 @@
 			baseConfigurationReference = 7AFA3C8E1D35360C0083082E /* Release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				BUILD_LIBRARY_FOR_DISTRIBUTION = NO;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = "$(FLUTTER_BUILD_NUMBER)";
-				DEVELOPMENT_TEAM = 92HDVG8T6H;
+				DEVELOPMENT_TEAM = A5R74MCCR3;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = Runner/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -583,7 +655,10 @@
 		};
 		CA09A3372998900500A9D6EF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 402923EA6BD20A65876C4B7D /* Pods-AwesomeNotifExtension.debug.xcconfig */;
 			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				BUILD_LIBRARY_FOR_DISTRIBUTION = NO;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
 				CLANG_ENABLE_OBJC_WEAK = YES;
@@ -593,6 +668,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 92HDVG8T6H;
+				ENABLE_BITCODE = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AwesomeNotifExtension/Info.plist;
@@ -620,7 +696,10 @@
 		};
 		CA09A3382998900500A9D6EF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2F891CB58E08D5E8163ECFC1 /* Pods-AwesomeNotifExtension.release.xcconfig */;
 			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				BUILD_LIBRARY_FOR_DISTRIBUTION = NO;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
 				CLANG_ENABLE_OBJC_WEAK = YES;
@@ -630,6 +709,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 92HDVG8T6H;
+				ENABLE_BITCODE = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AwesomeNotifExtension/Info.plist;
@@ -654,7 +734,10 @@
 		};
 		CA09A3392998900500A9D6EF /* Profile */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 44DD0D9BF2D748305A846949 /* Pods-AwesomeNotifExtension.profile.xcconfig */;
 			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				BUILD_LIBRARY_FOR_DISTRIBUTION = NO;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
 				CLANG_ENABLE_OBJC_WEAK = YES;
@@ -664,6 +747,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 92HDVG8T6H;
+				ENABLE_BITCODE = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AwesomeNotifExtension/Info.plist;
