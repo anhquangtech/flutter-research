@@ -1,6 +1,3 @@
-import 'dart:developer';
-import 'dart:math';
-
 import 'package:awesome_notifications/awesome_notifications.dart';
 import 'package:awesome_notifications_fcm/awesome_notifications_fcm.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -42,6 +39,12 @@ class NotificationController {
         debug: debug);
   }
 
+  Future<void> startListeningNotificationEvents() async {
+    AwesomeNotifications().setListeners(
+      onActionReceivedMethod: onActionReceivedMethod,
+    );
+  }
+
   Future<void> localNotification() async {
     await AwesomeNotifications().createNotification(
         content: NotificationContent(
@@ -63,6 +66,11 @@ class NotificationController {
             requireInputText: true,
             actionType: ActionType.SilentAction,
           ),
+          NotificationActionButton(
+            key: 'DISMISS',
+            label: 'Dismiss',
+            autoDismissible: true,
+          ),
         ]);
   }
 
@@ -75,6 +83,7 @@ class NotificationController {
         bigPicture:
             'https://images.pexels.com/photos/14679216/pexels-photo-14679216.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
         notificationLayout: NotificationLayout.ProgressBar,
+        progress: 70,
       ),
     );
   }
@@ -187,56 +196,29 @@ class NotificationController {
     print('Notification action launched app: $receivedAction');
   }
 
-  Future<void> startListeningNotificationEvents() async {
-    AwesomeNotifications().setListeners(
-      onActionReceivedMethod: onActionReceivedMethod,
-      onNotificationCreatedMethod: onNotificationCreatedMethod,
-      onNotificationDisplayedMethod: onNotificationDisplayedMethod,
-    );
-  }
-
-  @pragma('vm:entry-point')
-  static Future<void> onNotificationCreatedMethod(
-      ReceivedNotification receivedNotification) async {
-    // inspect(receivedNotification);
-  }
-
-  @pragma('vm:entry-point')
-  static Future<void> onNotificationDisplayedMethod(
-      ReceivedNotification receivedNotification) async {
-    // inspect(receivedNotification);
-  }
-
   @pragma('vm:entry-point')
   static Future<void> onActionReceivedMethod(
       ReceivedAction receivedAction) async {
     if (receivedAction.actionType == ActionType.SilentAction ||
         receivedAction.actionType == ActionType.SilentBackgroundAction) {
+      debugPrint('---Input message---${receivedAction.buttonKeyInput}------');
       switch (receivedAction.buttonKeyPressed) {
         case 'MEDIA_PREV':
           // Handle media prev
+          debugPrint("-----------MEDIA_PREV-----------");
           break;
         case 'MEDIA_PAUSE':
           // Handle media pause
+          debugPrint("-----------MEDIA_PAUSE-----------");
           break;
         case 'MEDIA_NEXT':
           // Handle media next
+          debugPrint("-----------MEDIA_NEXT-----------");
           break;
       }
-      await executeLongTaskInBackground();
     } else {
       EasyLoading.showToast("FCM message ne!",
           toastPosition: EasyLoadingToastPosition.bottom);
-    }
-  }
-
-  static Future<void> executeLongTaskInBackground() async {
-    if (kDebugMode) {
-      print("starting long task");
-    }
-    await Future.delayed(const Duration(seconds: 4));
-    if (kDebugMode) {
-      print("long task done");
     }
   }
 }

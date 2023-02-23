@@ -1,7 +1,4 @@
-import 'package:awesome_notifications_fcm/awesome_notifications_fcm.dart';
-import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:awesome_notifications/awesome_notifications.dart';
 import 'package:flutterresearch/notification/notification_controller.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
 
@@ -61,7 +58,6 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   void initState() {
     super.initState();
-    // notifController.startListeningNotificationEvents();
   }
 
   @override
@@ -78,19 +74,19 @@ class _MyHomePageState extends State<MyHomePage> {
               onPressed: () {
                 notifController.localNotification();
               },
-              child: Icon(Icons.circle_notifications),
+              child: const Icon(Icons.circle_notifications),
             ),
             ElevatedButton(
               onPressed: () {
                 notifController.localDownload();
               },
-              child: Icon(Icons.download),
+              child: const Icon(Icons.download),
             ),
             ElevatedButton(
               onPressed: () {
                 notifController.localMediaNotif();
               },
-              child: Icon(Icons.music_video),
+              child: const Icon(Icons.music_video),
             ),
           ],
         ),
